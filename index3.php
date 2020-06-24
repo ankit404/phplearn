@@ -7,16 +7,16 @@
 </head>
 <body>
     <?php
-    $car=array("honda","mercedez","lamborgini","rollce royce");
+    
     // foreach($car as $value){
     //     echo "$value <br>";
-    for($x=0;$x<4;$x++){
-        echo "i wnt to drive".$car[$x];
-        echo "<br>";
-    }
     
-
-
+   $arr =array("he"=>"01","she"=>"02","they"=>"03");
+   arsort($arr);
+   foreach($arr as $v=>$v_value){
+       echo "key: ".$v." , "."value:".$v_value;
+       echo "<br>";
+   }
     ?>
 </body>
 </html>
