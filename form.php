@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phpforms</title>
+    <style>
+    .error{
+        color: red;
+    }
+    </style>
 </head>
 <body>
     <?php
     $name = $website = $position = $experience = $estatus = $comments = " ";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $name=val($_POST["name"]);
-        $website=val($_POST["website"]);
-        $position=val($_POST["position"]);
-        $experience=val($_POST["experience"]);
-        $estatus=val($_POST["estatus"]);
-        $comments=val($_POST["comments"]);
+
+        if (empty($_POST["name"])){
+            echo "<span class=\"error\">Error: Name Required</span>";
+        }elseif(!preg_match("/^[a-zA-Z]*$/",$_POST["name"])){
+            echo "<span class=\"error\">Error:Name contains only letters</span>";
+
+        }
+        elseif(empty($_POST["website"])){
+            echo "<span class=\"error\">Error:Website Required</span>";
+
+        }
+
+        else{
+            $name=val($_POST["name"]);
+            $website=val($_POST["website"]);
+            $position=val($_POST["position"]);
+            $experience=val($_POST["experience"]);
+            $estatus=val($_POST["estatus"]);
+            $comments=val($_POST["comments"]);
+
+        }
+
+        
 
     }
 
