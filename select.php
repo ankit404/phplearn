@@ -10,5 +10,16 @@ $conn = new mysqli($servername,$username,$password,$dbname);
 if ($conn->connect_error){
     die("connection failed :".$conn->connect_error);
 }
-echo "Connection established !";
+//$sq = "SELECT DISTINCT id,firstname,lastname,email,date FROM users";
+$sq= "SELECT *From users";
+$result = $conn->query($sq);
+if ($result->num_rows>0){
+    while($row =$result->fetch_assoc()){
+        echo "ID:" .$row["id"]."- Name:".$row["firstname"]." ".$row["lastname"]."- Email:".$row["email"]."- Date: ".$row["date"]."<br>";
+    }
+
+}else{
+    echo "0 results";
+}
+
 ?>
