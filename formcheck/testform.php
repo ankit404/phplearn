@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <form action="reg.php" method="post">
+    <form action="prepared.php" method="post">
      <table width="300" border="0" cellspacing="1" cellpadding="1">
      <tr>
      <td><h4>firstname:</h4></td>

@@ -7,8 +7,9 @@
 //con check
 $conn = new mysqli($servername,$username,$password,$dbname);
 //check conn
-if ($conn->connect){
-    die("connection failed :".$conn->connect);
+if ($conn->connect_error){
+    die("connection failed :".$conn->connect_error);
 }
 echo "Connection established !";
+$conn->close;
 ?>
