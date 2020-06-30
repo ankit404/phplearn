@@ -27,29 +27,43 @@ if($result->num_rows > 0){
 <html lang="en">
 <head>
     
-    <title>Document</title>
+    <title>Update Database!</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <form action="updateuser.php" method="post">
-    <table width="300" border="0" cellspacing="1" cellpadding="1">
+    <div id="login">
+    <h2>Update Form!</h2>
+    
+     <label>FirstName :</label>
+   <input type="text" name="fname" value="<?php echo $fname; ?>">
+   <label>LastName :</label>
+   <input type="text" name="lname" value="<?php echo $lname; ?>">
+   <label>Email :</label>
+   <input type="Email" name="email" value="<?php echo $email; ?>">
+    <br><br>
+    <input type="submit" name="" value="Update  details">
+
+    <!--
     <tr>
-    <td>First name:</td>
+    <td><h4>FirstName:</h4></td>
     <td><input type="text" name="fname" value="<?php echo $fname; ?>"></td>
     </tr>
     <tr>
-    <td>Last name:</td>
+    <td>LastName:</td>
     <td><input type="text" name="lname" value="<?php echo $lname; ?>"></td>
     </tr>
     <tr>
     <td>Email:</td>
-    <td><input type="text" name="email" value="<?php echo $email; ?>"></td>
+    <td><input type="Email" name="email" value="<?php echo $email; ?>"></td>
     </tr>
     <tr>
     <td>&nbsp;</td>
     <td><input type="submit" name="" value="update"></td>
     </tr>
+-->
     
-    </table>
+    </div>
     <input type="hidden" name="id" value="<?php echo $id ?>">
     </form>
 </body>
