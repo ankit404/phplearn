@@ -1,2 +1,2 @@
 # phplearn
-Just learning things in PhP
+Just a PhP learn
