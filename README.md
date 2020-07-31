@@ -1,2 +1,2 @@
 # phplearn
-learning PHP
+learning!
